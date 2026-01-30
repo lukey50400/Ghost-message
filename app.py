@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import uuid
 
-API_URL = "http://127.0.0.1:8000"
+API_URL = "https://ghost-message-wjr1.onrender.com"
 
 # --- Sticky ID Logic ---
 if "my_ghost_id" not in st.session_state:
@@ -42,4 +42,5 @@ try:
             st.write(msg['text'])
             st.caption(f"Posted on: {msg['created_at'][:16]}")
 except:
+
     st.info("No messages yet. Be the first!")
